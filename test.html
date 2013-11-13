@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Prueba para Signal JS</title>
+	<script src="signal.js"></script>
+	<script src="object.signal.js"></script>
+
+	<script>
+
+		var nota = new Entity();
+		nota.titulo = "Nota Principal";
+		nota.codigo = "00001";
+
+		signal.subscribe("change:titulo", function( data ){
+			console.log("Información Antigua: " + data.old );
+			console.log("Información Nueva : " +  data.new );
+		});
+
+		signal.subscribe("change:codigo", function( data ){
+			console.log("Información Antigua: " + data.old );
+			console.log("Información Nueva : " +  data.new );
+		});
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
