@@ -8,7 +8,7 @@
 	// Se verifica que signal haya sido incluido
 	if ( window.signal == undefined ) {
 		return;
-	} 
+	}
 
 
 	// Componente principal de opciones

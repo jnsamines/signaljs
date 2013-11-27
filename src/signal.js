@@ -1,10 +1,10 @@
-﻿
+
 
 // SignalJS - Implementación básica para el patrón publisher / suscriber
 // Permite el uso del patrón publicador / suscriptor
 var signal = {};
 
-(function( exports ){
+(function (exports) {
 
 	// Componente principal de la aplicación, que permite manejar todas las funciones
 	// utilitarias y propiedades del sistema.
@@ -17,7 +17,7 @@ var signal = {};
 	// Función para adición de suscriptores a un tema en específico.
 	// <param name="topic"> Tema al cual se va a realizar la suscripción. </param>
 	// <param name="func"> Función de suscripción. </param>
-	exports.subscribe = function( topic, func ){
+	exports.subscribe = function ( topic, func ){
 
 		// se agrega el nuevo tema a la lista de suscripciones, si no ha sido agregado.
 		if ( component.subscribers_by_topic[ topic ]  === undefined ){
@@ -42,7 +42,7 @@ var signal = {};
 	// <param name="topic"> Tema al cual se desea cancelar la suscripción. </param>
 	// <param name="identifier"> Identificador de la suscripción. ( Este es generado al momento de realizar la suscripción al tema ). </param>
 	exports.unsubscribe = function( topic , identifier ){
-		
+
 		// se obtiene la lista de suscriptores para el tema en específico.
 		var subscribers = component.subscribers_by_topic[ topic ];
 
